@@ -13,8 +13,8 @@ type AddUserPost struct {
 
 func PostUser(c *gin.Context) {
 
-	var adduserPost AddUserPost
-	err := c.ShouldBindJSON(&adduserPost)
+	var addUserPost AddUserPost
+	err := c.ShouldBindJSON(&addUserPost)
 	if err != nil {
 		c.JSON(500, gin.H{
 			"errorCode": "01",
@@ -24,11 +24,11 @@ func PostUser(c *gin.Context) {
 		return
 	}
 
-	database.AddUser(adduserPost.Name, adduserPost.Tel)
+	database.AddUser(addUserPost.Name, addUserPost.Tel)
 	// will output : {"lang":"GO\u8bed\u8a00","tag":"\u003cbr\u003e"}
 	// c.AsciiJSON(http.StatusOK, data)
 	c.JSON(http.StatusOK, gin.H{
-		"Name": adduserPost.Name,
-		"Tel":  adduserPost.Tel,
+		"Name": addUserPost.Name,
+		"Tel":  addUserPost.Tel,
 	})
 }
