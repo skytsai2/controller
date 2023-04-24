@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.9.0
-	github.com/skytsai2/database v0.0.0-20230420085350-46f1ac735e07
+	github.com/skytsai2/database v0.0.0-20230424032142-8bb30fc3a3f7
 )
 
 require (
