@@ -1,4 +1,4 @@
-module github.com/skytsai2/user
+module github.com/skytsai2/controller
 
 go 1.20
 
